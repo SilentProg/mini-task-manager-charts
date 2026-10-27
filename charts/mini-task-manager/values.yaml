@@ -1,17 +1,14 @@
 # Значення за замовчуванням для чарту mini-task-manager.
 
 replicaCount: 2
-
 image:
   repository: silentprog/mini-task-manager
   # Шаблонне значення: CI-пайплайн mini-task-manager замінює його на версію зібраного образу (1.2.N).
-  tag: "latest"
+  tag: "1.2.2"
   pullPolicy: IfNotPresent
-
 service:
   type: ClusterIP
   port: 80
-
 ingress:
   enabled: true
   className: nginx
@@ -19,17 +16,14 @@ ingress:
   clusterIssuer: letsencrypt-prod
   host: mtm.kprojectgemfk.xyz
   tls: true
-
 # Облікові дані. Для лабораторної вони лежать тут; у реальному проєкті їх тримають у Sealed Secrets / Vault.
 secrets:
   mysqlRootPassword: change_me_root
   dbPassword: change_me_app
   jwtSecret: change_me_jwt_secret
-
 resources:
-  requests: { cpu: 50m, memory: 64Mi }
-  limits: { cpu: 500m, memory: 256Mi }
-
+  requests: {cpu: 50m, memory: 64Mi}
+  limits: {cpu: 500m, memory: 256Mi}
 mysql:
   image: mysql:8.4
   database: mini_task_manager
@@ -39,5 +33,5 @@ mysql:
     enabled: false
     size: 1Gi
   resources:
-    requests: { cpu: 100m, memory: 384Mi }
-    limits: { cpu: "1", memory: 768Mi }
+    requests: {cpu: 100m, memory: 384Mi}
+    limits: {cpu: "1", memory: 768Mi}
