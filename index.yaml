@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  mini-task-manager:
+  - apiVersion: v2
+    appVersion: 1.2.2
+    created: "2026-10-27T15:55:09.952039245Z"
+    description: Mini Task Manager (Node.js/Express + React) разом із MySQL
+    digest: 16ccca79d904e95e1f646b8a141cd7c67c009053c6562ed6617e1d9af188e08e
+    home: https://github.com/SilentProg/mini-task-manager
+    maintainers:
+    - name: SilentProg
+      url: https://github.com/SilentProg
+    name: mini-task-manager
+    type: application
+    urls:
+    - https://github.com/SilentProg/mini-task-manager-charts/releases/download/mini-task-manager-0.2.1/mini-task-manager-0.2.1.tgz
+    version: 0.2.1
+generated: "2026-10-27T15:55:09.952044766Z"
